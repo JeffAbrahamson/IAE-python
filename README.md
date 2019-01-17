@@ -54,7 +54,7 @@ Cela marche également sur MacOS si vous êtes à l'aise dans le terminal.
 Apparemment l'usage de python sur Windows marche très bien sauf quand
 ce n'est pas le cas.  Les systèmes MacOS et linux sont beaucoup plus
 répandus dans le domaine de stat/ML/data science.  Ceci dit, un
-produit commercial avec une très bonne offre gratuit existe :
+produit commercial avec une très bonne offre gratuite existe :
 [anaconda](https://www.anaconda.com/).  Il est téléchargeable
 [ici](https://www.anaconda.com/download/#linux).
 
