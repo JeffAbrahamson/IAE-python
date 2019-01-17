@@ -56,7 +56,7 @@ ce n'est pas le cas.  Les systèmes MacOS et linux sont beaucoup plus
 répandus dans le domaine de stat/ML/data science.  Ceci dit, un
 produit commercial avec une très bonne offre gratuite existe :
 [anaconda](https://www.anaconda.com/).  Il est téléchargeable
-[ici](https://www.anaconda.com/download/#linux).
+[ici](https://www.anaconda.com/download/).
 
 ## Tester
 
