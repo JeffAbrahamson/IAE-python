@@ -43,7 +43,9 @@ Puis, dans votre répertoire de travail :
 	$ . venv/bin/activate                   # N'oubliez pas le "." au début.
 	$ pip install -r requirements.txt
 
-Le fichier `requirements.txt` se trouve [ici](requirements.txt).
+Le fichier `requirements.txt` se trouve [ici](requirements.txt).  Le
+plus facile est de cloner ce repository.  Voir plus bas, "jour 1", sur
+`git clone`.
 
 Cela marche également sur MacOS si vous êtes à l'aise dans le terminal.
 
