@@ -82,7 +82,7 @@ pouvoir faire le suivant :
 	In [5]: quit
 	(venv) vagrant@ubuntu-bionic:~$
 
-Il existe également une version de même logiciel qui vous présente un
+Il existe également une version du même logiciel qui vous présente un
 éditeur dans votre browser : le Jupyter notebook.  Si vous l'essayez
 sans browser, vous auriez ça :
 
@@ -122,4 +122,5 @@ Il y existe un petit mot sur git si vous ne le connaissez pas.
 Ne pensez pas que nous passerons notre temps à discuter les tutoriels
 d'autre part.  Mais on s'en prive pas non plus.
 
-Il conviendrait également de faire un clone de ce repository.
+Il conviendrait également de faire un clone du repository actuel
+(UN-stat).
