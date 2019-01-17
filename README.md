@@ -119,3 +119,4 @@ Il y existe un petit mot sur git si vous ne le connaissez pas.
 Ne pensez pas que nous passerons notre temps à discuter les tutoriels
 d'autre part.  Mais on s'en prive pas non plus.
 
+Il conviendrait également de faire un clone de ce repository.
