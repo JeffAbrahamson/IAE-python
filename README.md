@@ -61,8 +61,9 @@ produit commercial avec une très bonne offre gratuite existe :
 ## Tester
 
 Vous avez sans doute le bon instinct de demander si vous avez bien
-fait.  Vous pouvez lancer `ipython` (commandline: ipython; sinon, il y a
-un icône quelque part).  Et puis vous devez pouvoir faire le suivant :
+suivi cette démarche.  Vous pouvez lancer `ipython` (commandline:
+ipython; sinon, il y a un icône quelque part).  Et puis vous devez
+pouvoir faire le suivant :
 
 	(venv) vagrant@ubuntu-bionic:~$ ipython
 	Python 3.6.7 (default, Oct 22 2018, 11:32:17)
