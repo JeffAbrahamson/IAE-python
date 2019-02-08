@@ -1,0 +1,220 @@
+\input ../talk-header.tex
+\title{Python}
+\subtitle{Introduction}
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command: 
+%\beamerdefaultoverlayspecification{<+->}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{numpy}
+  \vphrase{A replacement for MatLab}
+\end{frame}
+
+\begin{frame}{numpy}
+  \begin{itemize}
+  \item \texttt{ndarray} : \textit{an n-dimensional array}
+  \end{itemize}
+
+  \texttt{np.array([1,2,3])}\\
+  \texttt{np.array([[1, 2], [3, 4]])}\\
+  \texttt{np.array([1, 2, 3], dtype = complex)}\\[5mm]
+
+  \texttt{a = np.array(...)}\\
+  \texttt{a.shape}\\
+  \texttt{a.shape = (n, m)}\\
+  \texttt{a.reshape(n, m)}\\[5mm]
+
+  \texttt{a.dtype}\\
+  \texttt{a.itemsize}
+\end{frame}
+
+\begin{frame}{numpy}
+  \texttt{np.empty()}\\
+  \texttt{np.empty(shape)}\\[5mm]
+
+  \texttt{np.zeros(shape)}\\
+  \texttt{np.ones(shape)}\\[5mm]
+
+  \texttt{np.zeros(48).reshape(6,8)}\\
+  \texttt{np.zeros((6,8), dtype=np.int\_)}  
+\end{frame}
+
+\begin{frame}{numpy}
+  \texttt{np.asarray(a)}\\
+  \texttt{np.array(a)}\\
+  \texttt{np.fromiter(iterable, dtype, count = -1)}\\[7mm]
+
+  \texttt{np.arange(start, stop, step, dtype)}\\[3mm]
+  \texttt{np.linspace(start, stop, num, endpoint, retstep, dtype)}\\[3mm]
+  \texttt{np.logspace(start, stop, num, endpoint, base, dtype)}
+\end{frame}
+
+\begin{frame}{numpy}
+  \texttt{a = arange(30)}\\
+  \texttt{s = slice(2,7,2)}\\
+  \texttt{a[s]}\\[2mm]
+  \texttt{a[2:7:2]}\\[5mm]
+
+  \texttt{m = np.arange(48).reshape(6,8)}\\
+  \texttt{m[1:]}\\
+  \texttt{m[1:3, 2:5]}\\
+  \texttt{m[:, 1]}\\
+  \texttt{m[..., 1]}\\
+  \texttt{m[:, :-1]}\\
+  \texttt{m[1:3, [1,3]]}
+\end{frame}
+
+\begin{frame}{numpy}
+  \texttt{m = np.arange(48).reshape(6,8)}\\
+  \texttt{m[m > 20]}\\[5mm]
+
+  \texttt{n = np.zeros((6,8), dtype=np.int\_)}\\
+  \texttt{n[3, 5] = 4}\\
+  \texttt{n[5, 3] = 2}\\
+  \texttt{m[n > 0]}
+\end{frame}
+
+\begin{frame}{numpy}
+  Numerical operations are naively element-wise:
+
+  \texttt{a = np.array([1, 2, 3, 4])}\\
+  \texttt{b = np.array([10, 20, 30, 40])}\\
+  \texttt{a + b}\\
+  \texttt{a * b}\\[5mm]
+
+  There are rules (called broadcasting) for how to extend arrays when
+  they aren't the same size.  (So be careful if that's not what you
+  mean.)
+\end{frame}
+
+\begin{frame}{numpy}
+  \texttt{a = np.arange(0, 60, 5).reshape(3, 4)}\\
+  \texttt{for x in np.nditer(a):}\\
+  \texttt{    print(x)}\\[5mm]
+
+  \texttt{for x in np.nditer(a, order='C'):}\\
+  \texttt{    print(x)}\\[5mm]
+
+  \texttt{for x in np.nditer(a, order='F'):}\\
+  \texttt{    print(x)}\\[5mm]
+
+  \texttt{a.T}\\
+  
+\end{frame}
+
+\begin{frame}{numpy}
+  \texttt{reshape()} : change shape without changing data\\
+  \texttt{flat()} : a 1-D iterator over the array\\
+  \texttt{flatten()} : return a 1-D copy of the array\\[5mm]
+
+  \texttt{concatenate()} : join arrays along existing axis\\
+  \texttt{stack()} : join arrays along new axis\\
+  \texttt{hstack()}\\
+  \texttt{vstack()}\\[5mm]
+
+  \texttt{split()}\\
+  \texttt{hsplit()}\\
+  \texttt{vsplit()}
+\end{frame}
+
+\begin{frame}{numpy}
+  \texttt{$+$, $-$, $/$, $\cdot$}\\[2mm]
+  \texttt{np.sin()}, etc.\\[2mm]
+  \texttt{np.reciprocal()}\\
+  \texttt{np.power()}\\
+  \texttt{np.mod()}\\[2mm]
+  \texttt{np.real()}, \texttt{np.imag()}, \texttt{np.conj()}, \texttt{np.angle()}\\
+\end{frame}
+
+\begin{frame}{numpy}
+  \texttt{np.amin()}, \texttt{np.amax()}\\
+  \texttt{np.ptp()}\\
+  \texttt{np.percentile()}\\
+  \texttt{np.median()}\\
+  \texttt{np.mean()}\\
+  \texttt{np.average()} : weighted average\\[2mm]
+  \texttt{np.var()}\\[2mm]
+  \texttt{np.sqrt(np.mean(np.abs(x - x.mean()) ** 2))} \\
+  \hspace{10mm} $\iff$ \texttt{math.sqrt(np.var())}
+\end{frame}
+
+\begin{frame}{numpy}
+  \texttt{import numpy.matlib as npmat}\\[2mm]
+  \texttt{npmat.empty()}\\
+  \texttt{npmat.zeros()}\\
+  \texttt{npmat.ones()}\\
+  \texttt{npmat.eye())}, \texttt{npmat.identity()}\\
+  \texttt{npmat.rand()}\\
+  \texttt{npmat.ones()}\\
+  \texttt{npmat.ones()}\\
+\end{frame}
+
+\begin{frame}{numpy}
+  \texttt{import numpy.linalg as npl}\\[2mm]
+  \texttt{npl.dot()}
+  \texttt{npl.vdot()}
+  \texttt{npl.inner()}
+  \texttt{npl.matmul()}
+  \texttt{npl.determinant()}
+  \texttt{npl.solve()}
+  \texttt{npl.inv()}
+\end{frame}
+
+\begin{frame}{scipy}
+  Wrappers on top of classic fortran libraries (LAPACK, etc.).  Built
+  on top of \texttt{numpy} data multi-dimensional arrays.
+  
+  \texttt{import scipy}\\
+  \texttt{import scipy.cluster}, etc.
+
+  \begin{itemize}
+  \item \texttt{scipy.cluster} : vector quantisation, $k$-means
+  \item \texttt{scipy.constants}
+  \item \texttt{scipy.fftpack}
+  \item \texttt{scipy.integrate}
+  \item \texttt{scipy.interpolation}
+  \item \texttt{scipy.io}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{scipy}
+  \begin{itemize}
+  \item \texttt{scipy.linalg}
+  \item \texttt{scipy.ndimage}
+  \item \texttt{scipy.odr} : orthogonal distance regression
+  \item \texttt{scipy.optimze}
+  \item \texttt{scipy.signal}
+  \item \texttt{scipy.sparse}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{scipy}
+  \begin{itemize}
+  \item \texttt{scipy.spatial}
+  \item \texttt{scipy.special} : special mathematical functions
+  \item \texttt{scipy.stats}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Retours}
+  \begin{itemize}
+  \item Qu'est-ce qui vous a plu ?
+  \item Qu'est-ce qui vous a manqué ?
+  \end{itemize}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\talksection{Break}
+
+\begin{frame}
+  \frametitle{Questions?}
+\end{frame}
+
+\end{document}
